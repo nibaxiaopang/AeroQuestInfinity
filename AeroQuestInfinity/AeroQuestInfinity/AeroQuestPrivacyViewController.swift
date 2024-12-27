@@ -8,7 +8,7 @@
 
 import UIKit
 
-class PrivacyViewController: UIViewController {
+class AeroQuestPrivacyViewController: UIViewController {
 
     //MARK: - Declare IBOutlets
     

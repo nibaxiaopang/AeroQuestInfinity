@@ -8,7 +8,7 @@
 
 import UIKit
 
-class AboutViewController: UIViewController {
+class AeroQuestAboutViewController: UIViewController {
 
     //MARK: - Declare IBOutlets
     

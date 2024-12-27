@@ -8,7 +8,7 @@
 
 import UIKit
 
-class HowtoPlayViewController: UIViewController {
+class AeroQuestHowtoPlayViewController: UIViewController {
 
     //MARK: - Declare IBOutlets
     

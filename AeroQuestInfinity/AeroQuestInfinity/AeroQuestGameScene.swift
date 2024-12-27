@@ -9,7 +9,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class GameScene: SKScene, SKPhysicsContactDelegate {
+class AeroQuestGameScene: SKScene, SKPhysicsContactDelegate {
     
     private var plane: SKSpriteNode!
     private var scoreLabel: SKLabelNode!

@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SettingViewController: UIViewController {
+class AeroQuestSettingViewController: UIViewController {
 
     //MARK: - Declare IBOutlets
     

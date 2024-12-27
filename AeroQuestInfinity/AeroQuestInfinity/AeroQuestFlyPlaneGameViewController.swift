@@ -8,7 +8,7 @@
 
 import UIKit
 
-class FlyPlaneGameVC: UIViewController {
+class AeroQuestFlyPlaneGameViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var planeImageView: UIImageView!

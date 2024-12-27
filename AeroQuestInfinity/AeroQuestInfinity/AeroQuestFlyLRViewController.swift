@@ -9,7 +9,7 @@ import UIKit
 import SpriteKit
 import GameplayKit
 
-class ViewController: UIViewController {
+class AeroQuestFlyLRViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -17,7 +17,7 @@ class ViewController: UIViewController {
         let skView = SKView(frame: self.view.bounds)
         self.view.addSubview(skView)
         
-        let scene = GameScene(size: skView.bounds.size)
+        let scene = AeroQuestGameScene(size: skView.bounds.size)
         scene.scaleMode = .aspectFill
         skView.presentScene(scene)
         

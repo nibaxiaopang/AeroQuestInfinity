@@ -2,17 +2,16 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q5W-UR-OQ0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Privacy View Controller-->
+        <!--Aero Quest Privacy View Controller-->
         <scene sceneID="KQM-6c-IOA">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="eRg-UO-tyq" customClass="PrivacyViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="eRg-UO-tyq" customClass="AeroQuestPrivacyViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eb0-Tc-oof">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -206,10 +205,10 @@ By email: help@zephyraviavtoraltivolus.com</string>
             </objects>
             <point key="canvasLocation" x="3730" y="-680"/>
         </scene>
-        <!--About View Controller-->
+        <!--Aero Quest About View Controller-->
         <scene sceneID="rYI-Ie-ygb">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="C0h-DX-ppX" customClass="AboutViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="C0h-DX-ppX" customClass="AeroQuestAboutViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="byp-9S-YGG">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -238,7 +237,7 @@ By email: help@zephyraviavtoraltivolus.com</string>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lWS-qr-zGU">
                                 <rect key="frame" x="24" y="159" width="345" height="635"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">AeroQuest Infinity is your ultimate aviation adventure, delivering exhilarating challenges and endless fun. Test your reflexes, coordination, and piloting skills in two distinct gameplay modes: a thrilling 2D endless runner and an immersive 3D flying experience. Whether dodging obstacles or soaring through the skies, AeroQuest Infinity offers dynamic gameplay, vibrant visuals, and engaging mechanics for players of all ages.
+                                <string key="text">AeroQuest Infinity is your ultimate aviation adventure, delivering exhilarating challenges and endless fun. Test your reflexes, coordination, and piloting skills in two distinct gameplay modes: a thrilling 2D endless runner and an immersive 3D flying experience. Whether dodging obstacles or soaring through the skies, AeroQuest Infinity offers dynamic gameplay, vibrant visuals, and engaging mechanics for players of all ages.
 
 How to Play:
 	1.	Master the Controls – Navigate your plane using intuitive on-screen directional buttons, including diagonal movements for precision.
@@ -252,7 +251,7 @@ Key Features:
 	•	Family-Friendly Fun – Designed for all ages, making it perfect for casual fun and competitive play.
 	•	Unlimited Entertainment – With evolving challenges and limitless possibilities, every flight is a new adventure.
 
-Embark on your journey through the skies with AeroQuest Infinity, where the thrill of flight meets the endless pursuit of mastery!</mutableString>
+Embark on your journey through the skies with AeroQuest Infinity, where the thrill of flight meets the endless pursuit of mastery!</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -281,10 +280,10 @@ Embark on your journey through the skies with AeroQuest Infinity, where the thri
             </objects>
             <point key="canvasLocation" x="2378" y="-679"/>
         </scene>
-        <!--View Controller-->
+        <!--Aero Quest FlyLR View Controller-->
         <scene sceneID="8O0-1H-Ldo">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="V4c-Ng-8zq" customClass="ViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="V4c-Ng-8zq" customClass="AeroQuestFlyLRViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="IPT-Zh-umb">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -303,6 +302,7 @@ Embark on your journey through the skies with AeroQuest Infinity, where the thri
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="q5W-UR-OQ0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mzF-AA-kit">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -314,10 +314,10 @@ Embark on your journey through the skies with AeroQuest Infinity, where the thri
             </objects>
             <point key="canvasLocation" x="129.76744186046511" y="-27.682403433476395"/>
         </scene>
-        <!--Howto Play View Controller-->
+        <!--Aero Quest Howto Play View Controller-->
         <scene sceneID="kuf-bi-qlT">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="NcQ-Qb-QPd" customClass="HowtoPlayViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="NcQ-Qb-QPd" customClass="AeroQuestHowtoPlayViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Hyb-Wi-R6X">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -346,7 +346,7 @@ Embark on your journey through the skies with AeroQuest Infinity, where the thri
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nY3-fb-rtZ">
                                 <rect key="frame" x="24" y="159" width="345" height="635"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <mutableString key="text">1. Align Fly (2D Game)
+                                <string key="text">1. Align Fly (2D Game)
 Objective:
 Navigate your plane through a series of obstacles, avoid collisions, and score as many points as possible.
 
@@ -382,7 +382,7 @@ Game Over:
 The game ends if your plane collides with an obstacle. You can restart to try again and beat your previous high score.
 Advanced Features:
 As the game progresses, the speed of obstacles increases, testing your reflexes and agility.
-Pro Tips: Plan your moves ahead of time, utilize diagonal controls for smoother navigation, and maintain focus as the difficulty ramps up.</mutableString>
+Pro Tips: Plan your moves ahead of time, utilize diagonal controls for smoother navigation, and maintain focus as the difficulty ramps up.</string>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -411,10 +411,10 @@ Pro Tips: Plan your moves ahead of time, utilize diagonal controls for smoother 
             </objects>
             <point key="canvasLocation" x="3729" y="-28"/>
         </scene>
-        <!--HomeVC-->
+        <!--Aero Quest Home View Controller-->
         <scene sceneID="6Js-c3-ioV">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="3c8-tO-2HJ" customClass="HomeVC" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="3c8-tO-2HJ" customClass="AeroQuestHomeViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g8H-qa-Nf7">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -659,10 +659,10 @@ Pro Tips: Plan your moves ahead of time, utilize diagonal controls for smoother 
             </objects>
             <point key="canvasLocation" x="1713.4883720930231" y="-28.969957081545065"/>
         </scene>
-        <!--WelcomeVC-->
+        <!--Aero Quest Welcome View Controller-->
         <scene sceneID="MI1-Te-iHd">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="a5h-72-SQD" customClass="WelcomeVC" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="a5h-72-SQD" customClass="AeroQuestWelcomeViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="6PT-NV-zuw">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -728,10 +728,10 @@ Pro Tips: Plan your moves ahead of time, utilize diagonal controls for smoother 
             </objects>
             <point key="canvasLocation" x="873" y="-30"/>
         </scene>
-        <!--Fly Plane GameVC-->
+        <!--Aero Quest Fly Plane Game View Controller-->
         <scene sceneID="naT-Ps-oVS">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="rPN-kD-LyY" customClass="FlyPlaneGameVC" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="rPN-kD-LyY" customClass="AeroQuestFlyPlaneGameViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="X2S-QO-FXo">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -932,10 +932,10 @@ Pro Tips: Plan your moves ahead of time, utilize diagonal controls for smoother 
             </objects>
             <point key="canvasLocation" x="2671" y="170"/>
         </scene>
-        <!--Feedback View Controller-->
+        <!--Aero Quest Feedback View Controller-->
         <scene sceneID="Fdm-Qe-BoI">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="GYi-gt-S4c" customClass="FeedbackViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="GYi-gt-S4c" customClass="AeroQuestFeedbackViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zXI-dv-z75">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -1066,10 +1066,10 @@ Pro Tips: Plan your moves ahead of time, utilize diagonal controls for smoother 
             </objects>
             <point key="canvasLocation" x="3039" y="-679"/>
         </scene>
-        <!--Setting View Controller-->
+        <!--Aero Quest Setting View Controller-->
         <scene sceneID="iyC-PZ-2b7">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="eYS-rB-66q" customClass="SettingViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="eYS-rB-66q" customClass="AeroQuestSettingViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="GZS-S0-8a0">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
