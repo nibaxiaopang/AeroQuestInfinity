@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23094" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="q5W-UR-OQ0">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23084"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -11,22 +12,21 @@
         <!--Aero Quest Privacy View Controller-->
         <scene sceneID="KQM-6c-IOA">
             <objects>
-                <viewController useStoryboardIdentifierAsRestorationIdentifier="YES" id="eRg-UO-tyq" customClass="AeroQuestPrivacyViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AeroQuestPrivacyViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="eRg-UO-tyq" customClass="AeroQuestPrivacyViewController" customModule="AeroQuestInfinity" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Eb0-Tc-oof">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" alpha="0.80000001192092896" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_bg" translatesAutoresizingMaskIntoConstraints="NO" id="8O9-Nj-5T0">
+                            <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="A4x-36-CUn">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Privacy Policy" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dk4-WJ-TMK">
-                                <rect key="frame" x="124" y="85.666666666666671" width="145" height="39"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <wkWebViewConfiguration key="configuration">
+                                    <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                                    <wkPreferences key="preferences"/>
+                                </wkWebViewConfiguration>
+                            </wkWebView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Zru-jl-sFg">
-                                <rect key="frame" x="24" y="83" width="44" height="44"/>
+                                <rect key="frame" x="325" y="83" width="44" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="3fw-Td-4L5"/>
                                     <constraint firstAttribute="width" constant="44" id="E21-Wq-6BX"/>
@@ -37,169 +37,31 @@
                                     <action selector="btnBack:" destination="eRg-UO-tyq" eventType="touchUpInside" id="8VO-eY-3rP"/>
                                 </connections>
                             </button>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" bounces="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q7E-ny-eUx">
-                                <rect key="frame" x="24" y="159" width="345" height="635"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <string key="text">Last updated: December 13, 2024
-
-This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your information when You use the Service and tells You about Your privacy rights and how the law protects You.
-
-We use Your Personal data to provide and improve the Service. By using the Service, You agree to the collection and use of information in accordance with this Privacy Policy. This Privacy Policy has been created with the help of the Free Privacy Policy Generator.
-
-Interpretation and Definitions
-Interpretation
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
-
-Definitions
-For the purposes of this Privacy Policy:
-
-Account means a unique account created for You to access our Service or parts of our Service.
-
-Affiliate means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
-
-Application refers to AeroQuest Infinity, the software program provided by the Company.
-
-Company (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to ZephyrAeroQuest Infinity.
-
-Country refers to: Gujarat, India
-
-Device means any device that can access the Service such as a computer, a cellphone or a digital tablet.
-
-Personal Data is any information that relates to an identified or identifiable individual.
-
-Service refers to the Application.
-
-Service Provider means any natural or legal person who processes the data on behalf of the Company. It refers to third-party companies or individuals employed by the Company to facilitate the Service, to provide the Service on behalf of the Company, to perform services related to the Service or to assist the Company in analyzing how the Service is used.
-
-Usage Data refers to data collected automatically, either generated by the use of the Service or from the Service infrastructure itself (for example, the duration of a page visit).
-
-You means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
-
-Collecting and Using Your Personal Data
-Types of Data Collected
-Personal Data
-While using Our Service, We may ask You to provide Us with certain personally identifiable information that can be used to contact or identify You. Personally identifiable information may include, but is not limited to:
-
-Usage Data
-Usage Data
-Usage Data is collected automatically when using the Service.
-
-Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address), browser type, browser version, the pages of our Service that You visit, the time and date of Your visit, the time spent on those pages, unique device identifiers and other diagnostic data.
-
-When You access the Service by or through a mobile device, We may collect certain information automatically, including, but not limited to, the type of mobile device You use, Your mobile device unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile Internet browser You use, unique device identifiers and other diagnostic data.
-
-We may also collect information that Your browser sends whenever You visit our Service or when You access the Service by or through a mobile device.
-
-Use of Your Personal Data
-The Company may use Personal Data for the following purposes:
-
-To provide and maintain our Service, including to monitor the usage of our Service.
-
-To manage Your Account: to manage Your registration as a user of the Service. The Personal Data You provide can give You access to different functionalities of the Service that are available to You as a registered user.
-
-For the performance of a contract: the development, compliance and undertaking of the purchase contract for the products, items or services You have purchased or of any other contract with Us through the Service.
-
-To contact You: To contact You by email, telephone calls, SMS, or other equivalent forms of electronic communication, such as a mobile application's push notifications regarding updates or informative communications related to the functionalities, products or contracted services, including the security updates, when necessary or reasonable for their implementation.
-
-To provide You with news, special offers and general information about other goods, services and events which we offer that are similar to those that you have already purchased or enquired about unless You have opted not to receive such information.
-
-To manage Your requests: To attend and manage Your requests to Us.
-
-For business transfers: We may use Your information to evaluate or conduct a merger, divestiture, restructuring, reorganization, dissolution, or other sale or transfer of some or all of Our assets, whether as a going concern or as part of bankruptcy, liquidation, or similar proceeding, in which Personal Data held by Us about our Service users is among the assets transferred.
-
-For other purposes: We may use Your information for other purposes, such as data analysis, identifying usage trends, determining the effectiveness of our promotional campaigns and to evaluate and improve our Service, products, services, marketing and your experience.
-
-We may share Your personal information in the following situations:
-
-With Service Providers: We may share Your personal information with Service Providers to monitor and analyze the use of our Service, to contact You.
-For business transfers: We may share or transfer Your personal information in connection with, or during negotiations of, any merger, sale of Company assets, financing, or acquisition of all or a portion of Our business to another company.
-With Affiliates: We may share Your information with Our affiliates, in which case we will require those affiliates to honor this Privacy Policy. Affiliates include Our parent company and any other subsidiaries, joint venture partners or other companies that We control or that are under common control with Us.
-With business partners: We may share Your information with Our business partners to offer You certain products, services or promotions.
-With other users: when You share personal information or otherwise interact in the public areas with other users, such information may be viewed by all users and may be publicly distributed outside.
-With Your consent: We may disclose Your personal information for any other purpose with Your consent.
-Retention of Your Personal Data
-The Company will retain Your Personal Data only for as long as is necessary for the purposes set out in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply with our legal obligations (for example, if we are required to retain your data to comply with applicable laws), resolve disputes, and enforce our legal agreements and policies.
-
-The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally retained for a shorter period of time, except when this data is used to strengthen the security or to improve the functionality of Our Service, or We are legally obligated to retain this data for longer time periods.
-
-Transfer of Your Personal Data
-Your information, including Personal Data, is processed at the Company's operating offices and in any other places where the parties involved in the processing are located. It means that this information may be transferred to — and maintained on — computers located outside of Your state, province, country or other governmental jurisdiction where the data protection laws may differ than those from Your jurisdiction.
-
-Your consent to this Privacy Policy followed by Your submission of such information represents Your agreement to that transfer.
-
-The Company will take all steps reasonably necessary to ensure that Your data is treated securely and in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an organization or a country unless there are adequate controls in place including the security of Your data and other personal information.
-
-Delete Your Personal Data
-You have the right to delete or request that We assist in deleting the Personal Data that We have collected about You.
-
-Our Service may give You the ability to delete certain information about You from within the Service.
-
-You may update, amend, or delete Your information at any time by signing in to Your Account, if you have one, and visiting the account settings section that allows you to manage Your personal information. You may also contact Us to request access to, correct, or delete any personal information that You have provided to Us.
-
-Please note, however, that We may need to retain certain information when we have a legal obligation or lawful basis to do so.
-
-Disclosure of Your Personal Data
-Business Transactions
-If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be transferred. We will provide notice before Your Personal Data is transferred and becomes subject to a different Privacy Policy.
-
-Law enforcement
-Under certain circumstances, the Company may be required to disclose Your Personal Data if required to do so by law or in response to valid requests by public authorities (e.g. a court or a government agency).
-
-Other legal requirements
-The Company may disclose Your Personal Data in the good faith belief that such action is necessary to:
-
-Comply with a legal obligation
-Protect and defend the rights or property of the Company
-Prevent or investigate possible wrongdoing in connection with the Service
-Protect the personal safety of Users of the Service or the public
-Protect against legal liability
-Security of Your Personal Data
-The security of Your Personal Data is important to Us, but remember that no method of transmission over the Internet, or method of electronic storage is 100% secure. While We strive to use commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute security.
-
-Children's Privacy
-Our Service does not address anyone under the age of 13. We do not knowingly collect personally identifiable information from anyone under the age of 13. If You are a parent or guardian and You are aware that Your child has provided Us with Personal Data, please contact Us. If We become aware that We have collected Personal Data from anyone under the age of 13 without verification of parental consent, We take steps to remove that information from Our servers.
-
-If We need to rely on consent as a legal basis for processing Your information and Your country requires consent from a parent, We may require Your parent's consent before We collect and use that information.
-
-Links to Other Websites
-Our Service may contain links to other websites that are not operated by Us. If You click on a third party link, You will be directed to that third party's site. We strongly advise You to review the Privacy Policy of every site You visit.
-
-We have no control over and assume no responsibility for the content, privacy policies or practices of any third party sites or services.
-
-Changes to this Privacy Policy
-We may update Our Privacy Policy from time to time. We will notify You of any changes by posting the new Privacy Policy on this page.
-
-We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming effective and update the "Last updated" date at the top of this Privacy Policy.
-
-You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy Policy are effective when they are posted on this page.
-
-Contact Us
-If you have any questions about this Privacy Policy, You can contact us:
-
-By email: help@zephyraviavtoraltivolus.com</string>
-                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="22"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="pRG-Sc-0RL">
+                                <rect key="frame" x="186.66666666666666" y="416" width="20" height="20"/>
+                            </activityIndicatorView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="sZV-2N-YcM"/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="8O9-Nj-5T0" firstAttribute="leading" secondItem="Eb0-Tc-oof" secondAttribute="leading" id="2dQ-z4-Npb"/>
-                            <constraint firstItem="sZV-2N-YcM" firstAttribute="trailing" secondItem="q7E-ny-eUx" secondAttribute="trailing" constant="24" id="579-wc-7T4"/>
-                            <constraint firstItem="8O9-Nj-5T0" firstAttribute="top" secondItem="Eb0-Tc-oof" secondAttribute="top" id="A1G-jc-Rvt"/>
-                            <constraint firstItem="q7E-ny-eUx" firstAttribute="leading" secondItem="sZV-2N-YcM" secondAttribute="leading" constant="24" id="EHf-6e-ebn"/>
-                            <constraint firstItem="Dk4-WJ-TMK" firstAttribute="centerX" secondItem="Eb0-Tc-oof" secondAttribute="centerX" id="Ndc-Uw-GLs"/>
-                            <constraint firstItem="q7E-ny-eUx" firstAttribute="top" secondItem="Zru-jl-sFg" secondAttribute="bottom" constant="32" id="OB5-2C-Sc0"/>
-                            <constraint firstAttribute="trailing" secondItem="8O9-Nj-5T0" secondAttribute="trailing" id="SAa-Gd-uVf"/>
-                            <constraint firstItem="Zru-jl-sFg" firstAttribute="leading" secondItem="sZV-2N-YcM" secondAttribute="leading" constant="24" id="cKf-d3-n8d"/>
+                            <constraint firstItem="A4x-36-CUn" firstAttribute="leading" secondItem="Eb0-Tc-oof" secondAttribute="leading" id="24D-OR-ppD"/>
+                            <constraint firstItem="pRG-Sc-0RL" firstAttribute="centerX" secondItem="Eb0-Tc-oof" secondAttribute="centerX" id="FZ7-Yk-hzn"/>
+                            <constraint firstItem="pRG-Sc-0RL" firstAttribute="centerY" secondItem="Eb0-Tc-oof" secondAttribute="centerY" id="IT9-Ai-IhE"/>
+                            <constraint firstAttribute="bottom" secondItem="A4x-36-CUn" secondAttribute="bottom" id="OWS-pg-7KH"/>
+                            <constraint firstItem="A4x-36-CUn" firstAttribute="top" secondItem="Eb0-Tc-oof" secondAttribute="top" id="Oy6-hN-9Hf"/>
                             <constraint firstItem="Zru-jl-sFg" firstAttribute="top" secondItem="sZV-2N-YcM" secondAttribute="top" constant="24" id="eMX-S0-b9Q"/>
-                            <constraint firstAttribute="bottom" secondItem="8O9-Nj-5T0" secondAttribute="bottom" id="eYe-Sn-Uzw"/>
-                            <constraint firstItem="Dk4-WJ-TMK" firstAttribute="centerY" secondItem="Zru-jl-sFg" secondAttribute="centerY" id="h5D-z3-cNt"/>
-                            <constraint firstItem="sZV-2N-YcM" firstAttribute="bottom" secondItem="q7E-ny-eUx" secondAttribute="bottom" constant="24" id="vlU-Gf-umr"/>
+                            <constraint firstAttribute="trailing" secondItem="A4x-36-CUn" secondAttribute="trailing" id="utx-NB-rCN"/>
+                            <constraint firstItem="sZV-2N-YcM" firstAttribute="trailing" secondItem="Zru-jl-sFg" secondAttribute="trailing" constant="24" id="xbJ-GG-vDd"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="j2X-1Y-kkc"/>
+                    <connections>
+                        <outlet property="backButton" destination="Zru-jl-sFg" id="NoY-Fj-DUi"/>
+                        <outlet property="bottomCos" destination="OWS-pg-7KH" id="uzb-3T-fJO"/>
+                        <outlet property="indicatorView" destination="pRG-Sc-0RL" id="JLs-zd-pes"/>
+                        <outlet property="ppWebView" destination="A4x-36-CUn" id="Io4-NC-Gvb"/>
+                        <outlet property="topCos" destination="Oy6-hN-9Hf" id="tdR-uX-G07"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jlW-i8-yTh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,7 +164,6 @@ Embark on your journey through the skies with AeroQuest Infinity, where the thri
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" navigationBarHidden="YES" id="q5W-UR-OQ0" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="mzF-AA-kit">
-                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -723,6 +584,9 @@ Pro Tips: Plan your moves ahead of time, utilize diagonal controls for smoother 
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="KKH-JH-U6z"/>
+                    <connections>
+                        <outlet property="playButton" destination="nNl-7b-TwA" id="Lfb-k9-d8c"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="13f-9T-ORb" sceneMemberID="firstResponder"/>
             </objects>

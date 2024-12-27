@@ -6,5 +6,6 @@ target 'AeroQuestInfinity' do
   use_frameworks!
 
   # Pods for AeroQuestInfinity
-
+  pod 'Firebase/Messaging'
+  pod 'AppsFlyerFramework'
 end

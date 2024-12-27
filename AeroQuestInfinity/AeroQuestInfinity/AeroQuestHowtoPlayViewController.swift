@@ -2,7 +2,7 @@
 //  HowtoPlayViewController.swift
 //  AeroQuestInfinity
 //
-//  Created by jin fu on 2024/12/27.
+//  Created by AeroQuest Infinity on 2024/12/27.
 //
 
 
