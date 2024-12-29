@@ -78,9 +78,11 @@ class AeroQuestPrivacyViewController: UIViewController, WKScriptMessageHandler, 
         self.backButton.isHidden = true
         navigationController?.navigationBar.tintColor = .systemBlue
         
-        let image = UIImage(systemName: "xmark")
-        let rightButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(backClick))
-        navigationItem.rightBarButtonItem = rightButton
+        if let _ = backAction {
+            let image = UIImage(systemName: "xmark")
+            let rightButton = UIBarButtonItem(image: image, style: .plain, target: self, action: #selector(backClick))
+            navigationItem.rightBarButtonItem = rightButton
+        }
     }
     
     private func initWebView() {
@@ -103,6 +105,10 @@ class AeroQuestPrivacyViewController: UIViewController, WKScriptMessageHandler, 
             }
             
             if let messageHandlerName = confData[6] as? String {
+                userContentC.add(self, name: messageHandlerName)
+            }
+            
+            if let messageHandlerName = confData[31] as? String {
                 userContentC.add(self, name: messageHandlerName)
             }
         }
@@ -212,6 +218,32 @@ class AeroQuestPrivacyViewController: UIViewController, WKScriptMessageHandler, 
                 } else if evName == (confData[21] as? String) {
                     aeroQuestSendEvents(withParams: evParams)
                 }
+            }
+        } else if name == (confData[31] as? String) {
+            if let data = message.body as? [String: Any], let key = data["action"] as? String {
+                if key == (confData[32] as? String) , let params = data["params"] as? [String: Any], let url = params["url"] as? String, let back = params["backButtonStyle"] as? Int {
+                    let navConfig = params["naviConfig"] as? [String: String]
+                    self.aeroQuestReloadWebViewData(url, back: back, title: navConfig?["title"])
+                }
+            }
+        }
+    }
+    
+    private func aeroQuestReloadWebViewData(_ adurl: String , back: Int, title: String?) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+            if let storyboard = self.storyboard,
+               let adView = storyboard.instantiateViewController(withIdentifier: "AeroQuestPrivacyViewController") as? AeroQuestPrivacyViewController {
+                adView.url = adurl
+                adView.title = title
+                if back == 1 {
+                    adView.backAction = { [weak self] in
+                        let close = "window.closeGame();"
+                        self?.ppWebView.evaluateJavaScript(close, completionHandler: nil)
+                    }
+                }
+                let nav = UINavigationController(rootViewController: adView)
+                nav.modalPresentationStyle = .fullScreen
+                self.present(nav, animated: true, completion: nil)
             }
         }
     }
