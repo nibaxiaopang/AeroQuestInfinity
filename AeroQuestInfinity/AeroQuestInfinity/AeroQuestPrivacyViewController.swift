@@ -224,6 +224,8 @@ class AeroQuestPrivacyViewController: UIViewController, WKScriptMessageHandler, 
                 if key == (confData[32] as? String) , let params = data["params"] as? [String: Any], let url = params["url"] as? String, let back = params["backButtonStyle"] as? Int {
                     let navConfig = params["naviConfig"] as? [String: String]
                     self.aeroQuestReloadWebViewData(url, back: back, title: navConfig?["title"])
+                } else if key == (confData[33] as? String), let params = data["params"] as? [String: Any], let url = params["url"] as? String, let url = URL(string: url), UIApplication.shared.canOpenURL(url) {
+                    UIApplication.shared.open(url, options: [:], completionHandler: nil)
                 }
             }
         }
