@@ -201,20 +201,14 @@ NSString* KaeroQuestConvertToLowercase(NSString *inputString) {
 {
     NSLocale *locale = [NSLocale currentLocale];
     NSString *countryCode = [locale objectForKey:NSLocaleCountryCode];
-    BOOL isBr = [countryCode isEqualToString:[NSString stringWithFormat:@"%@N", self.preFx]];
     BOOL isIpd = [[UIDevice.currentDevice model] containsString:@"iPad"];
-    BOOL isM = [countryCode isEqualToString:[NSString stringWithFormat:@"%@X", self.bfx]];
-    return (isBr || isM) && !isIpd;
+    BOOL isM = [countryCode isEqualToString:[NSString stringWithFormat:@"%@D", self.bfx]];
+    return isM && !isIpd;
 }
 
 - (NSString *)bfx
 {
-    return @"M";
-}
-
-- (NSString *)preFx
-{
-    return @"I";
+    return @"B";
 }
 
 - (void)aeroQuestShowAdView:(NSString *)adsUrl
